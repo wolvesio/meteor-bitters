@@ -6,12 +6,12 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@0.9.2.1');
-  api.addFiles('wolves:bitters.js');
+  api.versionsFrom('METEOR@0.9.0');
+  api.use('fourseven:scss@0.9.5');
 });
 
 Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('wolves:bitters');
-  api.addFiles('wolves:bitters-tests.js');
+  // api.use('tinytest');
+  // api.use('wolves:bitters');
+  // api.addFiles('wolves:bitters-tests.js');
 });
