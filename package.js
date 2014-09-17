@@ -1,7 +1,8 @@
 Package.describe({
-  summary: " \* Fill me in! *\ ",
-  version: "1.0.0",
-  git: " \* Fill me in! *\ "
+  name: "wolves:bitters"
+  summary: "Meteor 0.9.x - Scaffold styles, variables and structure for Bourbon projects.",
+  version: "0.1.0",
+  git: "https://github.com/wolvesio/meteor-bitters"
 });
 
 Package.onUse(function(api) {
