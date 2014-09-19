@@ -28,9 +28,3 @@ Package.onUse(function(api) {
     isAsset: true
   });
 });
-
-Package.onTest(function(api) {
-  // api.use('tinytest');
-  // api.use('wolves:bitters');
-  // api.addFiles('wolves:bitters-tests.js');
-});
