@@ -8,6 +8,25 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.0');
   api.use('fourseven:scss@0.9.5');
+  api.addFiles([
+    "base.scss",
+    // Variables
+    "variables.scss",
+    // Extends
+    "extends/button.scss",
+    "extends/clearfix.scss",
+    "extends/errors.scss",
+    "extends/flashes.scss",
+    "extends/hide-text.scss",
+    // Typography and Elements
+    "typography.scss",
+    "forms.scss",
+    "tables.scss",
+    "lists.scss",
+    "buttons.scss"
+  ], 'server', {
+    isAsset: true
+  });
 });
 
 Package.onTest(function(api) {
