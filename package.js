@@ -23,7 +23,8 @@ Package.onUse(function(api) {
     "_forms.scss",
     "_tables.scss",
     "_lists.scss",
-    "_buttons.scss"
+    "_buttons.scss",
+    "_grid-settings.scss"
   ], 'server', {
     isAsset: true
   });
