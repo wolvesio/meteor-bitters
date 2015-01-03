@@ -35,8 +35,8 @@ Bitters is made to work alongside a CSS reset and not replace it. Our suggested 
 1. Simply import Bourbon at the top of your sass file, then import bitters directly after it (*Currently working on configuring a way to provide a far less verbose import command*):
 
   ```scss
-  @import ".meteor/local/build/programs/server/assets/packages/wolves_bourbon/bourbon"
-  @import ".meteor/local/build/programs/server/assets/packages/wolves_bitters/base"
+  @import ".meteor/local/build/programs/server/assets/packages/wolves_bourbon/bourbon";
+  @import ".meteor/local/build/programs/server/assets/packages/wolves_bitters/base";
   ```
 ---
 
