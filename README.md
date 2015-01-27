@@ -1,10 +1,10 @@
-## A [Meteor](http://meteor.com) package of [Thoughtbot's](http://thoughtbot.com), Bitters.
-
-**Scaffold styles, variables and structure for Bourbon projects.**
+A Bitters package for Meteor
+==============================================================================
+Scaffold styles, variables and structure for Bourbon projects, by [Thoughtbot](http://thoughtbot.com)
 
 ---
 
-[Bitters](http://bitters.bourbon.io) helps designers start projects faster by defining a basic set of Sass variables, default element style and project structure. It’s been specifically designed for use within web applications. Bitters should live in your project’s root Sass directory and we encourage you to modify and extend it to meet your design and brand requirements.
+Bitters helps designers start projects faster by defining a basic set of Sass variables, default element style and project structure. It’s been specifically designed for use within web applications. Bitters should live in your project’s root Sass directory and we encourage you to modify and extend it to meet your design and brand requirements.
 
 Bitters is made to work alongside a CSS reset and not replace it. Our suggested reset is Normalize.
 
