@@ -1,7 +1,7 @@
 Package.describe({
   name: "wolves:bitters",
   summary: "Meteor 0.9.3+ - Scaffold styles, variables and structure for Bourbon projects.",
-  version: "0.9.0",
+  version: "1.0.0",
   git: "https://github.com/wolvesio/meteor-bitters"
 });
 

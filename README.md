@@ -1,12 +1,10 @@
-**Notice: Currently Alpha - Actively Finalizing Issues**
-
 ## A [Meteor](http://meteor.com) package of [Thoughtbot's](http://thoughtbot.com), Bitters.
 
 **Scaffold styles, variables and structure for Bourbon projects.**
 
 ---
 
-Bitters helps designers start projects faster by defining a basic set of Sass variables, default element style and project structure. It’s been specifically designed for use within web applications. Bitters should live in your project’s root Sass directory and we encourage you to modify and extend it to meet your design and brand requirements.
+[Bitters](http://bitters.bourbon.io) helps designers start projects faster by defining a basic set of Sass variables, default element style and project structure. It’s been specifically designed for use within web applications. Bitters should live in your project’s root Sass directory and we encourage you to modify and extend it to meet your design and brand requirements.
 
 Bitters is made to work alongside a CSS reset and not replace it. Our suggested reset is Normalize.
 
@@ -18,7 +16,7 @@ Bitters is made to work alongside a CSS reset and not replace it. Our suggested 
   meteor add fourseven:scss
   ```
 
-2. From within your Meteor app's directory:
+2. From within your Meteor app's directory (Bitters relies on Bourbon):
 
   ```bash
   meteor add wolves:bourbon
@@ -30,17 +28,47 @@ Bitters is made to work alongside a CSS reset and not replace it. Our suggested 
   meteor add wolves:bitters
   ```
 
-##Importing
+4. Create a `scss.json` configuration file in the app's root with:
 
-1. Simply import Bourbon at the top of your sass file, then import bitters directly after it (*Currently working on configuring a way to provide a far less verbose import command*):
-
-  ```scss
-  @import ".meteor/local/build/programs/server/assets/packages/wolves_bourbon/bourbon";
-  @import ".meteor/local/build/programs/server/assets/packages/wolves_bitters/base";
+  ```json
+  {
+    "includePaths": [
+    ".meteor/local/build/programs/server/assets/packages/wolves_bourbon",
+    ".meteor/local/build/programs/server/assets/packages/wolves_bitters"
+    ]
+  }
   ```
+
+  **Example of scss.json using full bourbon suite**
+  *(This would be used after installing the `wolves:bitters` & `wolves:neat` packages along with bourbon)*
+  ```json
+  {
+    "includePaths": [
+      ".meteor/local/build/programs/server/assets/packages/wolves_bourbon",
+      ".meteor/local/build/programs/server/assets/packages/wolves_bitters",
+      ".meteor/local/build/programs/server/assets/packages/wolves_neat"
+    ]
+  }
+  ```
+
+##Usage
+
+1. Simply import Bourbon at the top of your sass file, then import bitters directly after it
+
+  `*.scss`
+  ```scss
+  @import "bourbon/bourbon";
+  @import "bitters/base";
+  ```
+  `*.sass`
+  ```scss
+  @import bourbon/bourbon
+  @import bitters/base
+  ```
+
 ---
 
-**Important Note** (*working on addressing this*)
+## Important Note
 Because Meteor will attempt to compile you app's local stylesheets prior to copying the server assets directory, the first time you run the app after installing the package your app will complain that it is unable to find it. For the moment this can be resolved by either stopping and restarting the app, at which point you should no longer get this error message, our running `touch` on you local stylesheet thats attempting to access the package, triggering a reload.
 
 ## Using Bitters
