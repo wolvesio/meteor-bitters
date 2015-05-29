@@ -68,6 +68,35 @@ Bitters is made to work alongside a CSS reset and not replace it. Our suggested 
   @import bitters/base
   ```
 
+2. When using Neat, uncomment the following line in `.meteor/local/build/programs/server/assets/packages/wolves_bitters/bitters/_base.scss`:
+
+  ```scss
+  @import "grid-settings";
+  ```
+
+  And import Neat after Bitters in your `application.scss` or main stylesheet file:
+
+  ```scss
+  @import "bourbon/bourbon";
+  @import "bitters/base";
+  @import "neat/neat";
+
+  // All other imports
+  ```
+
+  **Note:** If you are using Bitters and Neat without Ruby on Rails, you need to change the import for `neat-helpers` inside `_grid-settings.scss` to `"../neat/neat-helpers"`.
+
+  If you want to use Neat functions in Bitters, you can `@import "grid-settings";` before Neat, remove `@import "grid-settings";` from `_base.scss` and import the rest of bitters after. For example:
+
+  ```scss
+  @import "bourbon";
+  @import "base/grid-settings";
+  @import "neat";
+  @import "base/base";
+
+  // All other imports
+  ```
+
 ---
 
 ## Important Note
@@ -85,7 +114,7 @@ This houses all variables that are used, or will be used, in more than one file 
 Variables specifically created for [Neat](http://neat.bourbon.io) resets and breakpoints. To be used, these need to be imported separately from the rest of your base file above Neat in your main stylesheet. Otherwise just remove the file.
 
 ### Typography
-All type is based on `$base-font-size` which is set to 1em (16px) by default. The spacing around type is based on `$base-line-height` so as to keep a semi-baseline grid. All sizes are scaled up or down by a factor of `.25`.
+All type is based on `$base-font-size` which is set to 1em (16px) by default. The spacing around type is based on `$base-line-height` so as to keep a semi-baseline grid. All sizes are scaled up or down by a factor of `0.25`.
 
 ### Lists
 All lists have stripped out styles. No bullets, no left padding. To add back the expected browser default styles add `@extend %default-ul;` or `@extend %default-ol;` to the `<ul>` or `<ol>` respectively.
@@ -94,24 +123,24 @@ All lists have stripped out styles. No bullets, no left padding. To add back the
 Adds basic styles all form elements. The variables at the top of the file all inherit from the variables file but make it really easy to be overridden.
 
 ### Buttons
-Basic style for `button` and `input[type="submit"]`. Button style can be changed by setting the `$button-style` variable to one of the [Bourbon](http://bourbon.io) button style [options](http://bourbon.io/docs/#buttons).
-
-### Flashes
-Used for any error, warning or success messages in applications or forms. Specifically made for [Ruby on Rails](http://rubyonrails.org) application notices.
+Basic style for `button` and `input[type="submit"]`. Base button styles can be
+changed by modifying the styles applied to `button` and `#{$all-button-inputs}`
+in `base/_button.scss`.
 
 ## The Bourbon family
 
-- [Bourbon](http://bourbon.io): A simple and lightweight mixin library for Sass
-- [Neat](http://neat.bourbon.io): A lightweight semantic grid framework for Sass and Bourbon
-- [Bitters](http://bitters.bourbon.io): Scaffold styles, variables and structure for Bourbon projects
-- [Refills](http://refills.bourbon.io): Prepackaged patterns and components, built on top of Bourbon, Bitters & Neat
-
-## Credits
-
-![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
-
-Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Tweet your questions or suggestions to [@bourbonsass](https://twitter.com/bourbonsass) and while you’re at it follow us too.
+- [Bourbon](https://github.com/thoughtbot/bourbon): A simple and lightweight mixin library for Sass
+- [Neat](https://github.com/thoughtbot/neat): A lightweight semantic grid framework for Sass and Bourbon
+- [Bitters](https://github.com/thoughtbot/bitters): Scaffold styles, variables and structure for Bourbon projects
+- [Refills](https://github.com/thoughtbot/refills): Prepackaged patterns and components built with Bourbon, Neat and Bitters
 
 ## License
 
-Copyright © 2011–2014 [thoughtbot, inc](http://thoughtbot.com). Bourbon is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
+Copyright © 2013–2015 [thoughtbot, inc](http://thoughtbot.com). Bitters is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
+
+## About thoughtbot
+
+![thoughtbot](https://thoughtbot.com/logo.png)
+
+Bitters is maintained and funded by thoughtbot, inc.
+The names and logos for thoughtbot are trademarks of thoughtbot, inc.
