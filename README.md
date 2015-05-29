@@ -84,15 +84,13 @@ Bitters is made to work alongside a CSS reset and not replace it. Our suggested 
   // All other imports
   ```
 
-  **Note:** If you are using Bitters and Neat without Ruby on Rails, you need to change the import for `neat-helpers` inside `_grid-settings.scss` to `"../neat/neat-helpers"`.
-
-  If you want to use Neat functions in Bitters, you can `@import "grid-settings";` before Neat, remove `@import "grid-settings";` from `_base.scss` and import the rest of bitters after. For example:
+  If you want to use Neat functions in Bitters, you can `@import "grid-settings";` before Neat, remove `@import "grid-settings";` from `.meteor/local/build/programs/server/assets/packages/wolves_bitters/bitters/_base.scss` and import the rest of bitters after. For example:
 
   ```scss
-  @import "bourbon";
-  @import "base/grid-settings";
-  @import "neat";
-  @import "base/base";
+  @import "bourbon/bourbon";
+  @import "bitters/grid-settings";
+  @import "neat/neat";
+  @import "bitters/base";
 
   // All other imports
   ```
