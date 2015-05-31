@@ -1,15 +1,14 @@
 Package.describe({
   name: "wolves:bitters",
   summary: "Meteor 0.9.3+ - Scaffold styles, variables and structure for Bourbon projects.",
-  version: "2.1.0",
+  version: "2.1.1",
   git: "https://github.com/wolvesio/meteor-bitters"
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.3');
-
+  api.use('fourseven:scss@3.1.1');
   api.addFiles('scss.json', 'server');
-
   api.addFiles([
     // Variables
     "bitters/_variables.scss",
