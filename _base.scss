@@ -3,13 +3,13 @@
 // Copyright 2013-2015 thoughtbot, inc.
 // MIT License
 
-@import "variables";
+@import "bitters/variables";
 
 // Neat Settings -- uncomment if using Neat -- must be imported before Neat
 // @import "grid-settings";
 
-@import "buttons";
-@import "forms";
-@import "lists";
-@import "tables";
-@import "typography";
+@import "bitters/buttons";
+@import "bitters/forms";
+@import "bitters/lists";
+@import "bitters/tables";
+@import "bitters/typography";
