@@ -10,7 +10,7 @@
 
 Bitters is made to work alongside a CSS reset and not replace it. Our suggested reset is Normalize.
 
-##Install
+## Install
 
 1. Make sure to add sass support to your meteor app:
 
@@ -30,7 +30,7 @@ Bitters is made to work alongside a CSS reset and not replace it. Our suggested 
   meteor add wolves:bitters
   ```
 
-##Usage
+## Usage
 
 1. Simply import Bourbon at the top of your sass file, then import bitters directly after it
 
